@@ -1,0 +1,84 @@
+{
+	"manifest_version": 1,
+	"type": "WebApp",
+	"meta": {
+		"name": "overwolf-react",
+		"version": "1.0.0",
+		"minimum-overwolf-version": "0.77.10",
+		"author": "Hacksore",
+		"icon": "public/img/IconMouseOver.png",
+		"icon_gray": "public/img/IconMouseNormal.png",
+		"description": "A boilerplate for using react"
+	},
+	"permissions": [
+    "FileSystem",
+    "Hotkeys"
+	],
+	"data": {
+		"hotkeys": {
+			"open_ui": {
+				"title": "Open the custom UI",
+				"action-type": "custom",
+        "default": "Ctrl+1"        
+      },
+      "reload_extension": {
+        "title": "Reload mod",
+        "action-type": "custom",
+        "default": "F5"
+      }
+		},
+		"start_window": "BackgroundWindow",
+		"windows": {
+      "BackgroundWindow": {
+        "in_game_only": true,
+				"file": "build/index.html",
+				"transparent": true,        
+        "clickthrough": true,
+        "size": {
+					"width": 400,
+					"height": 200
+				},
+        "max_size": {
+					"width": 400,
+					"height": 200
+				},
+				"start_position": {
+					"top": 0,
+					"left": 0
+				}
+      },
+			"MainWindow": {
+        "in_game_only": true,
+				"file": "build/index.html",
+				"transparent": true,
+        "resizable": true,
+        "clickthrough": false,
+        "show_in_taskbar": false,
+				"size": {
+					"width": 400,
+					"height": 200
+        },
+        "max_size": {
+					"width": 400,
+					"height": 200
+				},
+				"start_position": {
+					"top": 0,
+					"left": 0
+				}
+			}
+		},
+		"launch_events": [
+			{
+				"event": "GameLaunch",
+				"event_data": {
+					"game_ids": [
+						5426,
+						10906
+					]
+				},
+				"start_minimized": true
+			}
+		]
+	}
+}

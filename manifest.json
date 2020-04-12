@@ -24,7 +24,7 @@
     "windows": {
       "in_game_overlay": {
         "in_game_only": true,
-
+        "debug_url": "http://localhost:3000",
         "file": "build/index.html",
         "transparent": true,
         "clickthrough": false,

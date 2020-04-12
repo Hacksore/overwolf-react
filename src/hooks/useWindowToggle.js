@@ -2,14 +2,14 @@
 import { useState, useEffect } from 'react';
 import { useWindow } from 'overwolf-hooks';
 
+// hmm keeping these in glboal breaks ????/
+const PASSTHROUGH = overwolf.windows.enums.WindowStyle.InputPassThrough;
+const { hotkeys } = overwolf.settings;
+
 // it works I guess ;)
 const useWindowToggle = () => {
   const [hasInput, setHasInput] = useState(false);
   const [overlayWindow] = useWindow('in_game_overlay');
-
-  // hmm keeping these in glboal breaks ????/
-  const PASSTHROUGH = overwolf.windows.enums.WindowStyle.InputPassThrough;
-  const { hotkeys } = overwolf.settings;
 
   useEffect(() => {
     const listener = () => {

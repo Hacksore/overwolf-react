@@ -1,16 +1,12 @@
 body {
   margin: 0;
   color: #fff;
-  /* overflow: hidden; */
-  /* overflow-y: hidden; */
   user-select: none;
-  /* width: 100%; */
 }
 
 .app {
   background: rgba(0, 0, 0, 0.0);
   display: block;
-  /* height: 100%; */
   border: 1px solid #000;
 }
 

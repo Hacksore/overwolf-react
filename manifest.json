@@ -30,11 +30,11 @@
         "clickthrough": false,
         "size": {
           "width": 300,
-          "height": 200
+          "height": 600
         },
         "start_position": {
-          "top": 100,
-          "left": 100
+          "top": 10,
+          "left": 10
         }
       }
     },

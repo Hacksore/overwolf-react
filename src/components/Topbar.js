@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './Topbar.css';
 
 import { useDrag, useWindow } from 'overwolf-hooks';
-import PropTypes from 'prop-types'; // ES6
+import PropTypes from 'prop-types';
 
 const Topbar = ({ hasInput = false }) => {
   const [overlayWindow] = useWindow('in_game_overlay');
@@ -20,8 +20,11 @@ const Topbar = ({ hasInput = false }) => {
       style={{
         backgroundColor: hasInput ? '#000' : 'rgba(0, 0, 0, 0.1)',
       }}
-      onMouseDown={(event) => onDragStart(event)}
-      onMouseMove={(event) => hasInput && onMouseMove(event)}
+      onMouseDown={onDragStart}
+      onMouseMove={(e) => {
+        console.log(e.clientX, e.clientY);
+        onMouseMove(e);
+      }}
     >
       react-overwolf-starter
     </div>

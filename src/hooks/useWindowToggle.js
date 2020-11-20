@@ -17,13 +17,13 @@ const useWindowToggle = () => {
         overwolf.windows.setWindowStyle(
           overlayWindow.id,
           PASSTHROUGH,
-          () => {}
+          () => {},
         );
       } else {
         overwolf.windows.removeWindowStyle(
           overlayWindow.id,
           PASSTHROUGH,
-          () => {}
+          () => {},
         );
 
         // make sure we dont interact at all with it

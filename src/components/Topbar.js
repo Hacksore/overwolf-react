@@ -20,11 +20,8 @@ const Topbar = ({ hasInput = false }) => {
       style={{
         backgroundColor: hasInput ? '#000' : 'rgba(0, 0, 0, 0.1)',
       }}
-      onMouseDown={onDragStart}
-      onMouseMove={(e) => {
-        console.log(e.clientX, e.clientY);
-        onMouseMove(e);
-      }}
+      onMouseDown={(e) => hasInput && onDragStart(e)}
+      onMouseMove={(e) => hasInput && onMouseMove(e)}
     >
       react-overwolf-starter
     </div>

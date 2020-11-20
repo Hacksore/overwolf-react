@@ -1,8 +1,6 @@
 {
-  "name": "react-overwolf-starter",
+  "name": "overwolf-react",
   "version": "2.0.0-alpha1",
-  "private": true,
-  "homepage": "./",
   "dependencies": {
     "overwolf-hooks": "^1.0.1",
     "react": "^16.13.1",
@@ -12,8 +10,10 @@
     "prop-types": "^15.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node createManifest.js && cross-env BROWSER=none react-scripts start",
+    "build": "react-scripts build && npm run manifest",
+    "manifest": "node createManifest.js --env=production",
+    "package": "npm run build && cd build && zip -r overwolf-react.opk .",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js --cache"
@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",

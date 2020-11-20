@@ -18,12 +18,12 @@ const Topbar = ({ hasInput = false }) => {
     <div
       className="bar"
       style={{
-        backgroundColor: hasInput ? '#000' : 'rgba(0, 0, 0, 0.1)',
+        backgroundColor: hasInput ? '#000' : 'rgba(0, 0, 0, 0)',
       }}
       onMouseDown={(e) => hasInput && onDragStart(e)}
       onMouseMove={(e) => hasInput && onMouseMove(e)}
     >
-      react-overwolf-starter
+      overworlf-react
     </div>
   );
 };

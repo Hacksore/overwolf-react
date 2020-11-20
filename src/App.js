@@ -12,7 +12,7 @@ const App = () => {
       <Topbar hasInput={hasInput} />
 
       <div className="app-content">
-        <img style={{ opacity: hasInput ? 1 : '0.5' }} src="https://placekitten.com/200/100" alt="kitty" />
+        <img style={{ opacity: hasInput ? 1 : '0.85' }} src="https://placekitten.com/200/100" alt="kitty" />
 
         { hasInput && <button type="button">Exmple Button</button> }
       </div>

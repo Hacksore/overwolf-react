@@ -2,15 +2,17 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta": {
-    "name": "react-overwolf-starter",
+    "name": "overwolf-react",
     "version": "2.0.0",
     "minimum-overwolf-version": "0.98.00",
     "author": "Hacksore",
-    "icon": "public/img/IconMouseOver.png",
-    "icon_gray": "public/img/IconMouseNormal.png",
+    "icon": "build/img/IconMouseOver.png",
+    "icon_gray": "build/img/IconMouseNormal.png",
     "description": "A CRA boilerplate for using react for overlays"
   },
-  "permissions": ["Hotkeys"],
+  "permissions": [
+    "Hotkeys"
+  ],
   "data": {
     "hotkeys": {
       "open_ui": {
@@ -38,12 +40,25 @@
         }
       }
     },
-    "game_events": [5426],
-    "game_targeting": { "type": "dedicated", "game_ids": [5426] },
+    "game_events": [
+      5426
+    ],
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": [
+        5426
+      ]
+    },
     "launch_events": [
       {
         "event": "GameLaunch",
-        "event_data": { "game_ids": [5426, 10902, 21584] },
+        "event_data": {
+          "game_ids": [
+            5426,
+            10902,
+            21584
+          ]
+        },
         "start_minimized": false
       }
     ]
